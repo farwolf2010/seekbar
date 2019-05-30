@@ -33,6 +33,7 @@ public class WXSeekBar extends WXComponent<SeekBar> {
             public void onProgressChanged(SeekBar seekBar, int i, boolean b) {
                 HashMap m=new HashMap();
                 m.put("value",i);
+                if(i>0)
                 WXSeekBar.this.fireEvent("change",m);
             }
 
